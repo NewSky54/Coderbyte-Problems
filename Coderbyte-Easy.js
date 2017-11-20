@@ -598,6 +598,13 @@ function overLappingRanges(arr) {
 // string "true" because it forms a superincreasing sequence. If a superincreasing sequence isn't formed, then your program should 
 // return the string "false".
 function superIncreasing(arr){
-
+	let added = 0;
+	for(let i=0; i<arr.length; i+=1){
+		added += arr[i];
+		if(added < arr[i]){
+			return false;
+		}
+	}
+	return true;
 }
-console.log(superIncresing());
+// console.log(superIncreasing([1, 7, 6, 13, 54]));

@@ -1,5 +1,7 @@
-**README**
+# **README.md**
 
-Coderbyte Solutions and Answers.
+### Coderbyte Solutions and Answers.
+
+---
 
 *Enjoy! (:*

@@ -608,3 +608,36 @@ function superIncreasing(arr){
 	return true;
 }
 // console.log(superIncreasing([1, 7, 6, 13, 54]));
+
+// Using the JavaScript language, have the function HammingDistance(strArr) take the array of strings stored in strArr, which will only 
+// contain two strings of equal length and return the Hamming distance between them. The Hamming distance is the number of positions 
+// where the corresponding characters are different. For example: if strArr is ["coder", "codec"] then your program should return 1. 
+// The string will always be of equal length and will only contain lowercase characters from the alphabet and numbers. 
+function hammingDistance(strArr){
+	let word1 = strArr[0], word2 = strArr[1];
+	let counter = 0;
+	for(let i=0; i<word1.length; i+=1){
+		if(word1[i] !== word2[i]){
+			counter++;
+		}
+	}
+	return counter;
+}
+// console.log(hammingDistance(["coder", "codec"]));
+
+// Using the JavaScript language, have the function RectangleArea(strArr) take the array of strings stored in strArr, which will only 
+// contain 4 elements and be in the form (x y) where x and y are both integers, and return the area of the rectangle formed by the 4 
+// points on a Cartesian grid. The 4 elements will be in arbitrary order. For example: if strArr is ["(0 0)", "(3 0)", "(0 2)", "(3 2)"] 
+// then your program should return 6 because the width of the rectangle is 3 and the height is 2 and the area of a rectangle is equal 
+// to the width * height. 
+function rectangleArea(strArr){
+
+}
+console.log(rectangleArea());
+
+
+
+
+
+
+

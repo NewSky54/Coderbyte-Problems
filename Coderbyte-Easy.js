@@ -21,7 +21,7 @@ function firstFactorial(num) {
 	}
 	return result;
 }
-// console.log(firstFactorial(8));
+console.log(firstFactorial(8));
 
 // Have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the 
 // string. If there are two or more words that are the same length, return the first word from the string with 
@@ -423,7 +423,7 @@ function dashInsert(str) {
 	for (let i = 0; i < arr.length - 1; i += 1) {
 		if (arr[i] % 2 !== 0 && arr[i + 1] % 2 !== 0) {
 			arr[i] += '-';
-		} 
+		}
 	}
 	return arr.join('');
 }
@@ -597,11 +597,10 @@ function overLappingRanges(arr) {
 // The array will only consist of positive integers. For example: if arr is [1, 3, 6, 13, 54] then your program should return the 
 // string "true" because it forms a superincreasing sequence. If a superincreasing sequence isn't formed, then your program should 
 // return the string "false".
-function superIncreasing(arr){
-	let added = 0;
-	for(let i=0; i<arr.length; i+=1){
+function superIncreasing(arr) {
+	for (let i = 0; i < arr.length; i += 1) {
 		added += arr[i];
-		if(added < arr[i]){
+		if (added < arr[i]) {
 			return false;
 		}
 	}
@@ -613,11 +612,11 @@ function superIncreasing(arr){
 // contain two strings of equal length and return the Hamming distance between them. The Hamming distance is the number of positions 
 // where the corresponding characters are different. For example: if strArr is ["coder", "codec"] then your program should return 1. 
 // The string will always be of equal length and will only contain lowercase characters from the alphabet and numbers. 
-function hammingDistance(strArr){
+function hammingDistance(strArr) {
 	let word1 = strArr[0], word2 = strArr[1];
 	let counter = 0;
-	for(let i=0; i<word1.length; i+=1){
-		if(word1[i] !== word2[i]){
+	for (let i = 0; i < word1.length; i += 1) {
+		if (word1[i] !== word2[i]) {
 			counter++;
 		}
 	}
@@ -630,14 +629,56 @@ function hammingDistance(strArr){
 // points on a Cartesian grid. The 4 elements will be in arbitrary order. For example: if strArr is ["(0 0)", "(3 0)", "(0 2)", "(3 2)"] 
 // then your program should return 6 because the width of the rectangle is 3 and the height is 2 and the area of a rectangle is equal 
 // to the width * height. 
-function rectangleArea(strArr){
+// function rectangleArea(strArr){
 
+// }
+// console.log(rectangleArea());
+
+function binaryReversal(str) {
+	//convert to binary
+	let bin = Number(str).toString(2);
+	// reverse the binary number
+	let rev = bin.split("").reverse().join("");
+	//convert binary to int
+	let res = parseInt(rev, 2);
+
+	return res;
 }
-console.log(rectangleArea());
+// console.log(binaryReversal('546'));
+
+// function twoSum(arr) {
+// 	//store first var = arr[0] which will be our test case.
+// 	let sum = arr[0];
+
+// 	//empty arr to store pairs
+// 	let output = [];
+
+// 	//iterate over arr to find arr[i] + arr[j] = sum. If so, then push pair output.
+// 	for (let i = 1; i < arr.length; i += 1) {
+// 		for (let j = i + 1; j < arr.length; j += 1) {
+// 			if (sum === arr[i] + arr[j]) {
+// 				output.push([arr[i], arr[j]]);
+// 			}
+// 		}
+// 	}
+// 	// return [].concat(...output);
+//     return (output.length === 0) ? -1: output.join(' ');
+// } 
 
 
-
-
+function twoSum(arr) { 
+	let sum = arr[0];
+	let output = [];
+    for(let i = 1; i<arr.length; i+=1){
+		for(let j = i + 1; j<arr.length; j+=1){
+			if(sum === arr[i] + arr[j]){
+				output.push([arr[i], arr[j]]);
+            }
+        }
+    }
+	return (output.length === 0) ? -1: output.join(' ');
+}
+console.log(twoSum([17, 4, 5, 6]));
 
 
 

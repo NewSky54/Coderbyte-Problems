@@ -34,7 +34,7 @@ function longestWord(sen) {
 	});
 	return arr[0];
 }
-// console.log(longestWord("Hello from Codesmith!"));
+console.log(longestWord("Hello!"));
 
 // Have the function LetterChanges(str) take the str parameter being passed and modify it using the following 
 // algorithm. Replace every letter in the string with the letter following it in the alphabet 
@@ -51,7 +51,7 @@ function letterChanges(str) {
 	});
 	return cap;
 }
-// console.log(letterChanges("Hello from Codesmith!"));
+console.log(letterChanges("Hello!"));
 
 // Have the function SimpleAdding(num) add up all the numbers from 1 to num. For example: if the input is 
 // 4 then your program should return 10 because 1 + 2 + 3 + 4 = 10. For the test cases, the parameter num will 
@@ -63,7 +63,7 @@ function SimpleAdding(num) {
 	}
 	return acc;
 }
-// console.log(SimpleAdding(8));
+console.log(SimpleAdding(8));
 
 // Have the function LetterCapitalize(str) take the str parameter being passed and capitalize the first 
 // letter of each word. Words will be separated by only one space.
@@ -75,7 +75,6 @@ function letterCapitalize(str) {
 	}
 	return words.join(' ');
 }
-// console.log(letterCapitalize("hello from codesmith!"));
 //or
 function letterCapitalize(str) {
 	return str
@@ -83,7 +82,7 @@ function letterCapitalize(str) {
 		.map(words => words[0].toUpperCase().concat(words.slice(1)))
 		.join(' ');
 }
-// console.log(letterCapitalize("hello from codesmith!"));
+console.log(letterCapitalize("hello from california!"));
 
 // Create a function findDuplicate(str) that takes the str parameter being passed in and returns out the 
 // dupicate words.
@@ -134,7 +133,7 @@ function simpleSymbols(str) {
 		return true;
 	}
 }
-// console.log(simpleSymbols("+a+st+"));
+console.log(simpleSymbols("+a+st+"));
 
 // Have the function CheckNums(num1,num2) take both parameters being passed and return the string true if 
 // num2 is greater than num1, otherwise return the string false. If the parameter values are equal to each other 
@@ -150,7 +149,7 @@ function checkNums(num1, num2) {
 function checkNums(num1, num2) {
 	return num2 === num1 ? '-1' : num2 > num1;
 }
-// console.log(checkNums(10, 1));
+console.log(checkNums(10, 1));
 
 // Have the function TimeConvert(num) take the num parameter being passed and return the number of hours 
 // and minutes the parameter converts to (ie. if num = 63 then the output should be 1:3). Separate the number 
@@ -165,7 +164,7 @@ function timeConvert(num) {
 function timeConvert(num) {
 	return Math.floor(num / 60) + ':' + num % 60;
 }
-// console.log(timeConvert(63));
+console.log(timeConvert(63));
 
 // Have the function AlphabetSoup(str) take the str string parameter being passed and return the string with 
 // the letters in alphabetical order (ie. hello becomes ehllo). Assume numbers and punctuation symbols will not 
@@ -173,7 +172,7 @@ function timeConvert(num) {
 function alphabetSoup(str) {
 	return str.toLowerCase().split('').sort().join('');
 }
-// console.log(alphabetSoup('Hello from Earth'))
+console.log(alphabetSoup('Hello from Earth'))
 
 // Have the function ABCheck(str) take the str parameter being passed and return the string true if the 
 // characters a and b are separated by exactly 3 places anywhere in the string at least once (ie. "lane borrowed" 
@@ -186,7 +185,7 @@ function ABCheck(str) {
 function ABCheck(str) {
 	return /[aA].{3}[bB]/.test(str);
 }
-// console.log(ABCheck('lank borrowed'));
+console.log(ABCheck('lank borrowed'));
 
 // Have the function VowelCount(str) take the str string parameter being passed and return the number of 
 // vowels the string contains (ie. "All cows eat grass and moo" would return 8). Do not count y as a vowel for 
@@ -195,7 +194,7 @@ function vowelCount(str) {
 	let vowels = str.match(/a|e|i|o|u/gi);
 	return vowels ? vowels.length : 0;
 }
-// console.log(vowelCount("All cows eat grass and moo"));
+console.log(vowelCount("All cows eat grass and moo"));
 
 // Have the function WordCount(str) take the str string parameter being passed and return the number of 
 // words the string contains (e.g. "Never eat shredded wheat or cake" would return 6). Words will be separated 
@@ -203,7 +202,7 @@ function vowelCount(str) {
 function wordCount(str) {
 	return str.split(' ').length;
 }
-// console.log(wordCount('Never eat shredded wheat or cake hffffi iaorstn r'))
+console.log(wordCount('Never eat shredded wheat or cake hffffi iaorstn r'))
 
 // Have the function ExOh(str) take the str parameter being passed and return the string true if there is 
 // an equal number of x's and o's, otherwise return the string false. Only these two letters will be entered 
@@ -215,7 +214,7 @@ function exOh(str) {
 	// console.log(xCount);
 	return xCount.length === oCount.length ? true : false;
 }
-// console.log(exOh('xoooxxxooxo'))
+console.log(exOh('xoooxxxooxo'))
 
 // Using the JavaScript language, have the function Palindrome(str) take the str parameter being passed and 
 // return the string true if the parameter is a palindrome, (the string is the same forward as it is backward) 
@@ -234,7 +233,7 @@ function palindrome(str) {
 	}
 	return (result === str) ? true : false;
 }
-// console.log(palindrome('racecar'));
+console.log(palindrome('racecar'));
 
 // Using the JavaScript language, have the function ArithGeo(arr) take the array of numbers stored in arr 
 // and return the string "Arithmetic" if the sequence follows an arithmetic pattern or return "Geometric" if it 
@@ -264,7 +263,7 @@ function isGeo(arr) {
 		(num, next) => (next / num !== ratio || arr.length === 1 ? false : next)
 	);
 }
-// console.log(ArithGeo([3]));
+console.log(ArithGeo([3]));
 
 // Using the JavaScript language, have the function ArrayAdditionI(arr) take the array of numbers stored 
 // in arr and return the string true if any combination of numbers in the array can be added up to equal the
@@ -290,7 +289,7 @@ function ArrayAdditionI(arr) {
 
 	return sumChecker(arr, max, x);
 }
-// console.log(ArrayAdditionI([2, 3, 5]));
+console.log(ArrayAdditionI([2, 3, 5]));
 
 // Have the function LetterCountI(str) take the str parameter being passed and return the first word with 
 // the greatest number of repeated letters. For example: "Today, is the greatest day ever!" should return 
@@ -323,7 +322,7 @@ function LetterCountI(str) {
 	} //end of for in
 	return result['num'] === 1 ? -1 : result['word'];
 } //end
-// LetterCountI("a happy mannn");
+LetterCountI("a happy mannn");
 
 // Using the JavaScript language, have the function SecondGreatLow(arr) take the array of numbers stored 
 // in arr and return the second lowest and second greatest numbers, respectively, separated by a space. For 
@@ -338,7 +337,7 @@ function secondGreatLow(arr) {
 		: sorted[1] + ' ' + sorted[sorted.length - 2];
 	// console.log(sorted)
 }
-// console.log(secondGreatLow([7, 106]));
+console.log(secondGreatLow([7, 106]));
 
 // Using the JavaScript language, have the function DivisionStringified(num1,num2) take both parameters 
 // being passed, divide num1 by num2, and return the result as a string with properly formatted commas. 
@@ -356,7 +355,7 @@ function divisionStringified(num1, num2) {
 		return str;
 	}
 }
-// console.log(divisionStringified(500, 20));
+console.log(divisionStringified(500, 20));
 
 // Using the JavaScript language, have the function CountingMinutesI(str) take the str parameter being 
 // passed which will be two times (each properly formatted with a colon and am or pm) separated by a hyphen 
@@ -379,7 +378,7 @@ function countingMinutesI(str) {
 	let diff = hour2 * 60 + min2 - (hour1 * 60 + min1);
 	return diff;
 }
-// countingMinutesI('1:00pm-4:00am');
+countingMinutesI('1:00pm-4:00am');
 
 // Using the JavaScript language, have the function MeanMode(arr) take the array of numbers stored in arr 
 // and return 1 if the mode equals the mean, 0 if they don't equal each other (ie. [5, 3, 3, 3, 1] should 
@@ -427,7 +426,7 @@ function dashInsert(str) {
 	}
 	return arr.join('');
 }
-// console.log(dashInsert('77993'));
+console.log(dashInsert('77993'));
 
 // Using the JavaScript language, have the function SwapCase(str) take the str parameter and swap the case 
 // of each character. For example: if str is "Hello World" the output should be hELLO wORLD. Let numbers and 
@@ -441,7 +440,7 @@ function swapCase(str) {
 	}
 	return arr.join('');
 }
-// console.log(swapCase('Hell%#* World'))
+console.log(swapCase('Hell%#* World'));
 
 // Using the JavaScript language, have the function NumberSearch(str) take the str parameter, search for all 
 // the numbers in the string, add them together, then return that final number. For example: if str is 
@@ -456,7 +455,7 @@ function numberSearch(str) {
 	}
 	return counter;
 }
-// console.log(numberSearch('88Hello 3World!'));
+console.log(numberSearch('88Hello 3World!'));
 
 // Using the JavaScript language, have the function ThirdGreatest(strArr) take the array of strings stored 
 // in strArr and return the third largest word within in. So for example: if strArr is ["hello", "world", 
@@ -469,7 +468,7 @@ function thirdGreatest(strArr) {
 	let sorted = strArr.sort((a, b) => b.length - a.length)
 	return sorted;
 }
-// console.log(thirdGreatest(["hello", "world", "before", "all"]))
+console.log(thirdGreatest(["hello", "world", "before", "all"]))
 
 // Using the JavaScript language, have the function PowersofTwo(num) take the num parameter being passed 
 // which will be an integer and return the string true if it's a power of two. If it's not return the string 
@@ -486,7 +485,7 @@ function PowersofTwo(num) {
 function PowersofTwo(num) {
 	return (num === 1) ? true : (num % 2 === 0) ? PowersofTwo(num / 2) : false;
 }
-// console.log(PowersofTwo(8));
+console.log(PowersofTwo(8));
 
 function flattenDeep(arr) {
 	return Array.isArray(arr) ? [].concat(...arr.map(flattenDeep)) : arr;
@@ -507,7 +506,7 @@ function AdditivePersistence(num) {
 	}
 	return 0;
 }
-// console.log(AdditivePersistence(2718));
+console.log(AdditivePersistence(2718));
 
 // Using the JavaScript language, have the function MultiplicativePersistence(num) take the num parameter 
 // being passed which will always be a positive integer and return its multiplicative persistence which is the 
@@ -526,7 +525,7 @@ function MultiplicativePersistence(num) {
 	}//end of if
 	return 0
 }
-// console.log(MultiplicativePersistence(27));
+console.log(MultiplicativePersistence(27));
 
 // Using the JavaScript language, have the function OffLineMinimum(strArr) take the strArr parameter being passed 
 // which will be an array of integers ranging from 1...n and the letter "E" and return the correct subset based on 
@@ -546,7 +545,7 @@ function offLineMinimum(strArr) {
 	}
 	return result.join(',');
 }
-// console.log(offLineMinimum(["1", "3", "2", "E", "E"]));
+console.log(offLineMinimum(["1", "3", "2", "E", "E"]));
 
 // Using the JavaScript language, have the function ChangingSequence(arr) take the array of numbers stored in arr and return the 
 // index at which the numbers stop increasing and begin decreasing or stop decreasing and begin increasing. For example: if arr is 
@@ -564,7 +563,7 @@ function changingSequence(arr) {
 	}
 	return -1;
 }
-// console.log(changingSequence([1, 2, 4, 6, 4, 3, 1]));
+console.log(changingSequence([1, 2, 4, 6, 4, 3, 1]));
 
 // Using the JavaScript language, have the function OverlappingRanges(arr) take the array of numbers stored in arr which will contain 
 // 5 positive integers, the first two representing a range of numbers (a to b), the next 2 also representing another range of integers 
@@ -590,7 +589,7 @@ function overLappingRanges(arr) {
 	let result = upperBound - lowerBound + 1;
 	return result >= target;
 }
-// console.log(overLappingRanges([4, 10, 2, 6, 3]));
+console.log(overLappingRanges([4, 10, 2, 6, 3]));
 
 // Using the JavaScript language, have the function Superincreasing(arr) take the array of numbers stored in arr and determine 
 // if the array forms a superincreasing sequence where each element in the array is greater than the sum of all previous elements. 
@@ -606,7 +605,7 @@ function superIncreasing(arr) {
 	}
 	return true;
 }
-// console.log(superIncreasing([1, 7, 6, 13, 54]));
+console.log(superIncreasing([1, 7, 6, 13, 54]));
 
 // Using the JavaScript language, have the function HammingDistance(strArr) take the array of strings stored in strArr, which will only 
 // contain two strings of equal length and return the Hamming distance between them. The Hamming distance is the number of positions 
@@ -622,7 +621,7 @@ function hammingDistance(strArr) {
 	}
 	return counter;
 }
-// console.log(hammingDistance(["coder", "codec"]));
+console.log(hammingDistance(["coder", "codec"]));
 
 // Using the JavaScript language, have the function RectangleArea(strArr) take the array of strings stored in strArr, which will only 
 // contain 4 elements and be in the form (x y) where x and y are both integers, and return the area of the rectangle formed by the 4 

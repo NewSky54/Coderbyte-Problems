@@ -14,10 +14,8 @@ function rectangleArea(strArr){
 
 	let minY = points.map(point => point[1]).sort()[0];
 	let maxY = points.map(point => point[1]).sort().reverse()[0];
-	
+
 	//Find the Area by multiplying the length by width after finding the difference between Max and min X/Y. 
 	return (maxX - minX) * (maxY - minY);
 }
 console.log(rectangleArea(["(0 0)", "(3 0)", "(0 2)", "(3 2)"]));
-
-

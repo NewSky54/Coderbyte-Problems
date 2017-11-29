@@ -12,7 +12,3 @@ function otherProducts(arr){
     return arr.map((val) => total/val).join('-');
 }
 console.log(otherProducts([1, 2, 3, 4, 5]));
-
-
-
-

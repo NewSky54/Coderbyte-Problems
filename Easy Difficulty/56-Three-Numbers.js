@@ -25,4 +25,24 @@ function threeNumbers(str){
     });
     return result;
 }
-console.log(threeNumbers("23b5 w1o2rl3d g1g3g92"));
+//Using for loop. Better run time as anytime a test is false, it can exit the function. 
+//Vs forEach going through each iteration.   
+function threeNumbers(str){
+    let arr = str.split(' ');
+    for(let i=0; i<arr.length; i+=1){
+        if(/\d\d\d/.test(arr)){//test for three nums adjacent to each other
+            return false;   
+        }
+        let nums = arr[i].replace(/\D/g, '')//test for only three numbers
+        if(nums.length !== 3){
+            return false;
+        }
+        let copyNums = [...nums]; 
+        if(copyNums[0] === copyNums[1] || copyNums[0] === copyNums[2] || copyNums[1] === copyNums[2]){ //test for repeating nums
+            return false;
+        }
+    }
+    return true;
+}
+console.log(threeNumbers("23b5 w1o2r3d 6g0g2"));
+//will return 'true'
